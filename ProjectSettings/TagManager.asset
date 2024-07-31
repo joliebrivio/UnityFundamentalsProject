@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - DeathZone
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
