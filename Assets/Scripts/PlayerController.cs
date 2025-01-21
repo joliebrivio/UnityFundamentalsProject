@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     // Const variables
-    private const float NO_MOVEMENT = 0f;
+    private const float NoMovement = 0f;
 
     // Inspector visible variables
     [Header("General")]
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         playerRigidbody2D = GetComponent<Rigidbody2D>();
-        MovementDirection = NO_MOVEMENT;
+        MovementDirection = NoMovement;
         isGrounded = true;
         isDashing = false;
         dashAvailable = true;
@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
         };
 
         // BUG: Breaks jumping on slopes.
-        if (isGrounded && playerRigidbody2D.velocity.y == 0)
+        if (isGrounded && playerRigidbody2D.velocity.y == NoMovement)
         {
             jumpCounter = 0;
         }
